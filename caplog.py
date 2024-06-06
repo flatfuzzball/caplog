@@ -7,9 +7,10 @@ from datetime import datetime
 title = "boblog"
 desc = "bobs awesome gemlog!"
 
-# blog/technical settings, ignore tells the program which .gmi files to ignore.
+# blog/technical settings, ignore tells the program which .gmi files to ignore. gemfeed controls whether or not to use gemfeed
 timeformat = "%Y-%m-%d"
 ignore = ["index.gmi",]
+gemfeed = True
 
 f = open("index.gmi", "w")
 f.write(f"# {title}\n## {desc}\n")
