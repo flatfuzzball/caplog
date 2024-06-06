@@ -1,6 +1,6 @@
 #! /usr/bin/python3
 import subprocess
-from os import listdir, path      
+from os import listdir, path
 from datetime import datetime
 
 # personal settings, you'll wanna change these.
@@ -16,13 +16,14 @@ url = "gemini://tilde.team/~flat"
 
 f = open("index.gmi", "w")
 f.write(f"# {title}\n## {desc}\n")
-
+if gemfeed:
+    f.write("=> atom.xml feed\n")
 
 for post in listdir():
     if post[-4:] == ".gmi" and post not in ignore:
         f.write(f"\n=> {post} {datetime.fromtimestamp(path.getmtime(post)).strftime(timeformat)} - {post[:-4]}")
-    
+
 f.close()
 
 if gemfeed:
-    subprocess.call(["python", gemfeed_path, "-b", url])
+    subprocess.call(["python", gemfeed_path, "-b", url, "-d", "."]) 
