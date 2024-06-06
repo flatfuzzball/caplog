@@ -11,6 +11,7 @@ desc = "bobs awesome gemlog!"
 timeformat = "%Y-%m-%d"
 ignore = ["index.gmi",]
 gemfeed = True
+gemfeed_path = "../gemfeed.py"
 
 f = open("index.gmi", "w")
 f.write(f"# {title}\n## {desc}\n")
