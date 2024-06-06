@@ -1,3 +1,5 @@
+#! /usr/bin/python
+
 from os import listdir, path
 from datetime import datetime
 
