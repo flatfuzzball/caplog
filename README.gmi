@@ -1,8 +1,8 @@
 # captain's log
-## minimal, no dependency gemlog generator in 12 lines of python (excluding comments and empty lines).
+## minimal, no dependency gemlog generator in 18 lines of python (excluding comments and empty lines).
 
 simply download the python file and configure the variables to your liking.
 
 to post, simply create a gmi file in your current directory, type away, and run the program. it generates an index.gmi file where all non-ignored gmi files are listed with dates.
 
-it does not generate atom/rss feeds.
+optionally uses gemfeed to generate atom feeds.
